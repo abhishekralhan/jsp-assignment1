@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>JSPAssignment1</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <filter>
+    <filter-name>ValidateUserFilter</filter-name>
+    <filter-class>com.bitwise.assignment1.ValidateUserFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>ValidateUserFilter</filter-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </filter-mapping>
+  
+   <filter>
+    <filter-name>ValidateEducationInfo</filter-name>
+    <filter-class>com.bitwise.assignment1.ValidateEducationInfo</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>ValidateEducationInfo</filter-name>
+    <url-pattern>/OccupationInformation.jsp</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>ValidateOccupationInfo</filter-name>
+    <filter-class>com.bitwise.assignment1.ValidateOccupationInfo</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>ValidateOccupationInfo</filter-name>
+    <url-pattern>/ResidentialInformation.jsp</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>ValidateResidentialInfo</filter-name>
+    <filter-class>com.bitwise.assignment1.ValidateResidentialInfo</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>ValidateResidentialInfo</filter-name>
+    <url-pattern>/DisplayInformation.jsp</url-pattern>
+  </filter-mapping>
+  <session-config>
+    <session-timeout>1</session-timeout>
+  </session-config>
+</web-app>
